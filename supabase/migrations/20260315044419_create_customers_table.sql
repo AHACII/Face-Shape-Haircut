@@ -1,27 +1,3 @@
-/*
-  # Create Customers Table for Face Shape Analysis
-
-  1. New Tables
-    - `customers`
-      - `id` (uuid, primary key) - معرف فريد للزبون
-      - `name` (text) - اسم الزبون
-      - `face_shape` (text) - شكل الوجه (Round, Square, Oval, Heart, Oblong, Diamond)
-      - `confidence` (numeric) - دقة التحليل
-      - `photo_url` (text, optional) - رابط صورة الزبون
-      - `created_at` (timestamptz) - تاريخ الإنشاء
-      - `updated_at` (timestamptz) - تاريخ آخر تحديث
-
-  2. Security
-    - Enable RLS on `customers` table
-    - Add policy for public read access (for barber shop use)
-    - Add policy for public insert access
-    - Add policy for public update access
-
-  3. Notes
-    - هذا الجدول مخصص لحلاقين لحفظ بيانات الزبناء
-    - يمكن البحث عن الزبون بالاسم للحصول على شكل وجهه المحفوظ
-    - RLS مفعل للأمان لكن الوصول عام لأنه تطبيق داخلي
-*/
 
 CREATE TABLE IF NOT EXISTS customers (
   id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
